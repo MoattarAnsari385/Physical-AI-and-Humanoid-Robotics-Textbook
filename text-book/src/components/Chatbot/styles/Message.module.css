@@ -1,0 +1,100 @@
+/* Message component styles */
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  max-width: 85%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User message styling */
+.user {
+  align-self: flex-end;
+  background-color: #e3f2fd;
+  border-radius: 18px 18px 4px 18px;
+  padding: 0.75rem 1rem;
+  margin-left: auto;
+  color: #0d47a1; /* Darker blue for better contrast */
+}
+
+/* System message styling */
+.system {
+  align-self: flex-start;
+  background-color: #f5f5f5;
+  border-radius: 18px 18px 18px 4px;
+  padding: 0.75rem 1rem;
+  margin-right: auto;
+  color: #212121; /* Darker gray for better contrast */
+}
+
+/* Status-specific styles */
+.pending {
+  opacity: 0.7;
+}
+
+.error {
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+}
+
+.highlight {
+  box-shadow: 0 0 0 2px #6200ea;
+  border-radius: 18px;
+}
+
+.content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: #757575;
+  gap: 0.5rem;
+}
+
+.timestamp {
+  opacity: 0.7;
+}
+
+.status {
+  color: #ff9800;
+  font-style: italic;
+}
+
+.statusError {
+  color: #f44336;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .message {
+    max-width: 90%;
+  }
+
+  .content {
+    font-size: 0.85rem;
+  }
+
+  .meta {
+    font-size: 0.65rem;
+  }
+}

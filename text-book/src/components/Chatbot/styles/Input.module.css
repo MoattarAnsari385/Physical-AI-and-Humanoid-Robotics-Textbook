@@ -1,0 +1,119 @@
+/* Chat input styles */
+
+.inputForm {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.textInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #bdbdbd; /* Darker border for better contrast */
+  border-radius: 24px;
+  resize: none;
+  min-height: 40px;
+  max-height: 120px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.4;
+  color: #212121; /* Darker text for better contrast */
+  background-color: white;
+}
+
+.textInput:focus {
+  border-color: #0055cc;
+  box-shadow: 0 0 0 2px rgba(0, 85, 204, 0.3); /* Increased opacity for better focus indicator */
+}
+
+.textInput:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.sendButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #00b894 0%, #0055cc 100%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 85, 204, 0.3);
+}
+
+.sendButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sendIcon {
+  font-size: 0.9rem;
+}
+
+.charCount {
+  font-size: 0.7rem;
+  color: #757575;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .inputForm {
+    padding: 0.8rem;
+  }
+
+  .textInput {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    min-height: 36px;
+  }
+
+  .sendButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sendIcon {
+    font-size: 0.8rem;
+  }
+
+  .charCount {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textInput {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+    min-height: 34px;
+  }
+
+  .sendButton {
+    width: 34px;
+    height: 34px;
+  }
+}
