@@ -2,7 +2,7 @@
 
 // Backend API URL - defaults to localhost:8001 for development
 // In Docusaurus, environment variables need to be accessed differently
-export const BACKEND_URL = 'http://localhost:8002';
+export const BACKEND_URL = 'https://web-production-a3fe.up.railway.app';
 
 // Default timeout for API requests (in milliseconds)
 export const API_TIMEOUT = 30000; // 30 seconds
